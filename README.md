@@ -50,7 +50,7 @@ eingeschränkt verwendbar:
 
 mit kleinen Änderungen verwendbar:
 - **Audi 100/200 (NF/MC und andere)**
-- bei den Motoren die nur das Ausblinken unterstützen muss statt des L9637D ein Relais verwendet werden um die Drahtbrücke zu schließen. Die Verkabelung für den Spannungsmesser um die Blinkcodes zu erkennen muss dann auch geändert werden. Fehlercodes und -texte sind für NF und MC bereits hinterlegt. Der Motorentyp kann konfiguriert werden (siehe [Anmerkungen](#-anmerkungen))
+- bei den Motoren die nur das Ausblinken unterstützen muss die Hardware etwas genändert werden. Außerdem sind kleine Änderungen in der Software-Konfiguration notwendig (siehe [Anmerkungen](#-anmerkungen))
 
 ---
 
@@ -122,7 +122,8 @@ Theoretisch ist das Ausblinken für den 20V gar nicht notwendig, da alle Funktio
 
 **Ausblinken mit Relais für NF, MC etc.** 
 
-Für Motoren die nur Ausblinken unterstützen kann man in der Datei Constants.h die Einstellungen vornehmen. Der Code berücksichtigt das dann und öffnet und schließt das Relais beim Auslesen. Den Relais-Pin am besten auf 12 lassen. Die Fehlertexte werden für den jeweiligen Motorcode geladen.
+Für Motoren ohne K-Line Schnittstelle die nur Ausblinken unterstützen muss statt des L9637D ein Relais verwendet werden um die Drahtbrücke zu schließen. Die Verkabelung für den Spannungsmesser um die Blinkcodes zu erkennen muss dann auch geändert werden. 
+Fehlercodes und -texte sind für NF und MC bereits im Code hinterlegt. Man muss nur die Konfiguration in der Datei "Constants.h" anpassen:
 
 <pre>const char ENGINE = "3B"; //mögliche Werte: "3B", "MC", "NF"  - für RR, AAN, etc. verwende "3B"
 #define USE_RELAIS false //für MC, NF, etc. auf true setzen
