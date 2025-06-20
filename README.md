@@ -21,6 +21,21 @@ Bei Fragen kommentiert am besten unter dem Video oder legt hier einen Issue an.
 
 ---
 
+## 🔧 Funktionen
+
+- ✅ **Fehlerspeicher auslesen über K-Line**
+- ✅ **Fehlerspeicher ausblinken**
+- ✅ **Fehlerspeicher löschen**
+- ✅ **Stellglieddiagnose über K-Line**
+- ✅ **Stellglieddiagnose mit Blinkcode**
+- ✅ **Sensorwerte live auslesen**
+- ✅ **Speichern & Laden von Sensordaten und Fehlerspeicher**
+- ✅ **Stromversorgung über Diagnosestecker im Auto**
+- ✅ **Das zusätzliche Auswertungstool erlaubt genauere Betrachtung der Diagnosewerte über Laptop**
+- 🐣 **Easteregg inklusive 😎**
+
+---
+
 ## 🚗 Unterstützte Fahrzeuge
 
 Ich habe es nur an meinem Audi 200 20V getestet, daher keine Garantie! Da sich die Steuergeräte bei diesen Motoren nicht unterscheiden, dürfte es bei folgenden Fahrzeugen problemlos funktionieren:
@@ -39,22 +54,8 @@ mit kleinen Änderungen verwendbar:
 
 ---
 
-## 🔧 Funktionen
 
-- ✅ **Fehlerspeicher auslesen über K-Line**
-- ✅ **Fehlerspeicher ausblinken**
-- ✅ **Fehlerspeicher löschen**
-- ✅ **Stellglieddiagnose über K-Line**
-- ✅ **Stellglieddiagnose mit Blinkcode**
-- ✅ **Sensorwerte live auslesen**
-- ✅ **Speichern & Laden von Sensordaten und Fehlerspeicher**
-- ✅ **Stromversorgung über Diagnosestecker im Auto**
-- ✅ **Das zusätzliche Auswertungstool erlaubt genauere Betrachtung der Diagnosewerte über Laptop**
-- 🐣 **Easteregg inklusive 😎**
-
----
-
-## 📦 Inhalte
+## 📦 Inhalte auf GitHub
 
 - `diagnoseGeraetAudi200/` → Arduino-Sketch zum Upload auf den Arduino
 - `diagnoseAuswertung/` → Python-Tool zur Anzeige und Speicherung von Sensorwerten (Live & CSV)
