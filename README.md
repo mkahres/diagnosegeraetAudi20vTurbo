@@ -2,7 +2,7 @@
 
 Das ist ein Diagnosegerät zum selber bauen. Es passt ins Handschuhfach, ist benutzerfreundlich und komplett Open Source. Für genauere Analysen gibts noch ein auf die 10 Sensorwerte angepasstes Auswertungstool dazu. Bei Fragen kommentiert am besten unter dem youtube-Video oder legt hier einen Issue an.
 
-🔽 [aktuelle ZIP-Datei herunterladen](https://github.com/mkahres/audi200diagnosegeraet/archive/refs/heads/main.zip)
+🔽 [aktuelle ZIP-Datei herunterladen](https://github.com/mkahres/diagnosegeraetAudi20vTurbo/archive/refs/heads/master.zip)
 
 <table>
   <tr>
@@ -72,7 +72,7 @@ mit kleinen Änderungen verwendbar:
 
 **Arduino**
 - aktuelle Arduino IDE installieren: https://www.arduino.cc/en/software/
-- den Sketch in der IDE öffnen (/diagnoseGeraetAudi200/diagnoseGeraetAudi200.ino)
+- den Sketch in der IDE öffnen (/diagnosegeraetAudi20vTurbo/diagnoseGeraet.ino)
 - folgende Libraries über den Library Manager installieren (https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/#using-the-library-manager):
    - Adafruit_SH110X
    - U8g2_for_Adafruit_GFX
