@@ -144,8 +144,6 @@ void setup(void)
   randomSeed(analogRead(0));
 
   Serial.println("READY");
-  
- // kLineManager.performOutputTests();
 } 
 
 void loop(void)
@@ -1106,6 +1104,7 @@ void setPinState(uint8_t level)
     digitalWrite(TX_pin, level);
   }
 }
+
 /*
 void sendeZufallswerte() { 
   int werte[10];
