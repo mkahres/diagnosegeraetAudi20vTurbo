@@ -113,12 +113,6 @@ Für Fahrzeuge die nur das Ausblinken unterstützen braucht man anstatt des L963
 
 ## 📌 Anmerkungen
 
-**Ausblinkfunktion beim 20v Turbo**
-
-Theoretisch ist das Ausblinken für den 20V gar nicht notwendig, da alle Funktionen über K-Line verfügbar sind. Wenn man darauf verzichten will kann man folgende Teile weglassen:
-- Spannungsmesser
-- von den Diagnoseadapter-Kabeln 2x2 braucht man nur noch einen Satz, da dann der blaue Stecker nicht mehr verwendet wird  
-- LED weglassen oder besser immer auf an setzen. Dazu in diagnoseGeraetAudi200.ino irgendwo in der Funktion setup() diese Zeile hinzufügen: <pre>analogWrite(ledPin, 5);</pre>
 
 **Ausblinken mit Relais für NF, MC etc.** 
 
@@ -128,6 +122,13 @@ Fehlercodes und -texte sind für NF und MC bereits im Code hinterlegt. Man muss 
 <pre>const char ENGINE = "3B"; //mögliche Werte: "3B", "MC", "NF"  - für RR, AAN, etc. verwende "3B"
 #define USE_RELAIS false //für MC, NF, etc. auf true setzen
 #define PIN_RELAY 12 //für MC, NF, etc. den Relais PIN setzen</pre>
+
+**Ausblinkfunktion beim 20v Turbo**
+
+Theoretisch ist das Ausblinken für den 20V gar nicht notwendig, da alle Funktionen über K-Line verfügbar sind. Wenn man darauf verzichten will kann man folgende Teile weglassen:
+- Spannungsmesser
+- von den Diagnoseadapter-Kabeln 2x2 braucht man nur noch einen Satz, da dann der blaue Stecker nicht mehr verwendet wird  
+- LED weglassen oder besser immer auf an setzen. Dazu in diagnoseGeraetAudi200.ino irgendwo in der Funktion setup() diese Zeile hinzufügen: <pre>analogWrite(ledPin, 5);</pre>
 
 **Debugging** 
 
