@@ -113,20 +113,22 @@ Für Fahrzeuge die nur das Ausblinken unterstützen braucht man anstatt des L963
 
 ## 📌 Anmerkungen
 
-**1.** Theoretisch ist das Ausblinken für den 20V gar nicht notwendig, da alle Funktionen über K-Line verfügbar sind. Wenn man darauf verzichten will kann man folgende Teile weglassen:
+**Ausblinkfunktion** 
+Theoretisch ist das Ausblinken für den 20V gar nicht notwendig, da alle Funktionen über K-Line verfügbar sind. Wenn man darauf verzichten will kann man folgende Teile weglassen:
 - Spannungsmesser
 - von den Diagnoseadapter-Kabeln 2x2 braucht man nur noch einen Satz, da dann der blaue Stecker nicht mehr verwendet wird  
 - LED weglassen oder besser immer auf an setzen. Dazu in diagnoseGeraetAudi200.ino irgendwo in der Funktion setup() diese Zeile hinzufügen: <pre>analogWrite(ledPin, 5);</pre>
 
-**2.** Die Stromversorgung wird über den Stepdown-Konverter runtergeregelt. Der Arduino hat selber nochmal am VIN-Pin einen Regler. Es sollten mindestens 7V ankommen, damit dieser Regler es dann auf 5V bringen kann. Der originale Arduino kann mit 7-12V gespeist werden. Beim Clone von Elegoo klappt das nicht, wie es bei Clones von anderen Marken aussieht kann ich nicht sagen. Bei Tests habe ich ca. 9V eingespeist und es kamen 6V an. Daher habe ich den Step Down Regler auf 7,2V gesetzt, damit kommen sichere 5V an.  
+**Sromversorgung**
+Die Stromversorgung wird über den Stepdown-Konverter runtergeregelt. Der Arduino hat selber nochmal am VIN-Pin einen Regler. Es sollten mindestens 7V ankommen, damit dieser Regler es dann auf 5V bringen kann. Der originale Arduino kann mit 7-12V gespeist werden. Beim Clone von Elegoo klappt das nicht, wie es bei Clones von anderen Marken aussieht kann ich nicht sagen. Bei Tests habe ich ca. 9V eingespeist und es kamen 6V an. Daher habe ich den Step Down Regler auf 7,2V gesetzt, damit kommen sichere 5V an.  
 
-**3.** Für Motoren die nur Ausblinken unterstützen kann man in der Datei Constants.h die Einstellungen vornehmen. Der Code berücksichtigt das dann und öffnet und schließt das Relais beim Auslesen. Den Relais-Pin am besten auf 12 lassen. Die Fehlertexte werden für den jeweiligen Motorcode geladen.
+**Ausblinken mit Relais für NF, MC etc.** Für Motoren die nur Ausblinken unterstützen kann man in der Datei Constants.h die Einstellungen vornehmen. Der Code berücksichtigt das dann und öffnet und schließt das Relais beim Auslesen. Den Relais-Pin am besten auf 12 lassen. Die Fehlertexte werden für den jeweiligen Motorcode geladen.
 
 <pre>const char ENGINE = "3B"; //mögliche Werte: "3B", "MC", "NF"  - für RR, AAN, etc. verwende "3B"
 #define USE_RELAIS false //für MC, NF, etc. auf true setzen
 #define PIN_RELAY 12 //für MC, NF, etc. den Relais PIN setzen</pre>
 
-**4.** Sollte es Probleme bei der K-Line Kommunikation geben kann man in configuration.h das Debugging aktivieren (beide Werte auf "true"). Das sollte man nur zum Testen einschalten, da die Debugging-Ausgaben die Kommunikation mit dem Auswertungstool behindern.
+**Debugging** Sollte es Probleme bei der K-Line Kommunikation geben kann man in configuration.h das Debugging aktivieren (beide Werte auf "true"). Das sollte man nur zum Testen einschalten, da die Debugging-Ausgaben die Kommunikation mit dem Auswertungstool behindern.
 
 <pre>// Enable/disable printing library debug information on the Serial Monitor.
 // You may change the debug level in "KLineKWP1281Lib.h".
@@ -134,7 +136,7 @@ Für Fahrzeuge die nur das Ausblinken unterstützen braucht man anstatt des L963
 // Enable/disable printing bus traffic on the Serial Monitor.
 #define debug_traffic false</pre>
 
-**5.** Den 3D-Druck sollte man am besten mit PETG machen, da es im Hochsommer evtl. doch mal über 60 Grad im Auto werden können und PLA dann schmilzt. 
+**3D Druck** Den 3D-Druck sollte man am besten mit PETG machen, da es im Hochsommer evtl. doch mal über 60 Grad im Auto werden können und PLA dann schmilzt. 
 
 ---
 
