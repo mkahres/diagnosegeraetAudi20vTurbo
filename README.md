@@ -123,7 +123,7 @@ Fehlercodes und -texte sind für NF und MC bereits im Code hinterlegt. Man muss 
 #define USE_RELAIS false //für MC, NF, etc. auf true setzen
 #define PIN_RELAY 12 //für MC, NF, etc. den Relais PIN setzen</pre>
 
-**Ausblinkfunktion beim 20v Turbo**
+**Ausblinken beim 20v Turbo**
 
 Die Ausblinkfunktion wird beim 20v Turbo über den L9637D gesteuert. Theoretisch ist das Ausblinken für den 20V gar nicht notwendig, da alle Funktionen über K-Line verfügbar sind. Wenn man darauf verzichten will kann man folgende Teile weglassen:
 - Spannungsmesser
