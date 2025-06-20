@@ -39,17 +39,17 @@ Bei Fragen kommentiert am besten unter dem Video oder legt hier einen Issue an.
 ## 🚗 Unterstützte Fahrzeuge
 
 Ich habe es nur an meinem Audi 200 20V getestet, daher keine Garantie! Da sich die Steuergeräte bei diesen Motoren nicht unterscheiden, dürfte es bei folgenden Fahrzeugen problemlos funktionieren:
-**- Audi 200 20V (3B)**
-**- Audi S2 (3B)**
-**- Audi S4 / S6 C4 (AAN)**
-**- Audi Urquattro 20V (RR)**
+- **Audi 200 20V (3B)**
+- **Audi S2 (3B)**
+- **Audi S4 / S6 C4 (AAN)**
+- **Audi Urquattro 20V (RR)**
 
 eingeschränkt verwendbar:
-**- 20V Turbos mit ABY, ADU, etc.**
+- **20V Turbos mit ABY, ADU, etc.**
 - Bei den "neueren" 20V Turbos können mehr als die 10 Sensoren ausgelesen werden. Dies ist mit dem Tool aktuell nicht möglich. Falls jemand Bock hat, die verwendete Library KLineKWP1281Lib unterstützt das Auslesen sämtlicher Gruppen. Es wäre also theoretisch möglich das Tool zu erweitern. Evtl. gibt es bei den Motoren auch mehr Fehlercodes und andere Fehlertexte.
 
 mit kleinen Änderungen verwendbar:
-**- Audi 100/200 (NF/MC und andere)**
+- **Audi 100/200 (NF/MC und andere)**
 - bei den Motoren die nur das Ausblinken unterstützen muss statt des L9637D ein Relais verwendet werden um die Drahtbrücke zu schließen. Die Verkabelung für den Spannungsmesser um die Blinkcodes zu erkennen muss dann auch geändert werden. Fehlercodes und -texte sind für NF und MC bereits hinterlegt. Der Motorentyp kann konfiguriert werden (siehe [Anmerkungen](#-anmerkungen))
 
 ---
