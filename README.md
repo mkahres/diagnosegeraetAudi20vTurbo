@@ -64,7 +64,7 @@ mit kleinen Änderungen verwendbar:
 
 **Arduino**
 - aktuelle Arduino IDE installieren: https://www.arduino.cc/en/software/
-- den Sketch in der IDE öffnen (/diagnosegeraetAudi20vTurbo-master/diagnoseGeraet.ino)
+- den Sketch in der IDE öffnen (/diagnoseGeraet/diagnoseGeraet.ino)
 - folgende Libraries über den Library Manager installieren (https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/#using-the-library-manager):
    - Adafruit_SH110X
    - U8g2_for_Adafruit_GFX
