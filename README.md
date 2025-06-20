@@ -54,17 +54,6 @@ mit kleinen Änderungen verwendbar:
 
 ---
 
-
-## 📦 Inhalte auf GitHub
-
-- `diagnoseGeraetAudi200/` → Arduino-Sketch zum Upload auf den Arduino
-- `diagnoseAuswertung/` → Python-Tool zur Anzeige und Speicherung von Sensorwerten (Live & CSV)
-- `sonstiges/` → Fritzing-Schaltplan und Bilder 
-- `stl/` → Dateien für den 3D-Druck
-
----
-
-
 ## ⚡ Schaltplan
 
 ![Schaltplan Vorschau](./sonstiges/diagnosegeraetKLinePlan_Steckplatine.png)
@@ -146,6 +135,15 @@ Für Fahrzeuge die nur das Ausblinken unterstützen braucht man anstatt des L963
 #define debug_traffic false</pre>
 
 **5.** Den 3D-Druck sollte man am besten mit PETG machen, da es im Hochsommer evtl. doch mal über 60 Grad im Auto werden können und PLA dann schmilzt. 
+
+---
+
+## 📦 Inhalte hier auf GitHub
+
+- `diagnoseGeraetAudi200/` → Arduino-Sketch zum Upload auf den Arduino
+- `diagnoseAuswertung/` → Python-Tool zur Anzeige und Speicherung von Sensorwerten (Live & CSV)
+- `sonstiges/` → Fritzing-Schaltplan und Bilder 
+- `stl/` → Dateien für den 3D-Druck
 
 ---
 
