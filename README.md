@@ -45,11 +45,11 @@ Ich habe es nur an meinem Audi 200 20V getestet, daher keine Garantie! Da sich d
 - **Audi Urquattro 20V (RR)**
 
 eingeschränkt verwendbar:
-- **20V Turbos mit ABY, ADU, etc.**
-Bei den "neueren" 20V Turbos können mehr als die 10 Sensoren ausgelesen werden. Dies ist mit dem Tool aktuell nicht möglich. Falls jemand Bock hat, die verwendete Library KLineKWP1281Lib unterstützt das Auslesen sämtlicher Gruppen. Es wäre also theoretisch möglich das Tool zu erweitern. Evtl. gibt es bei den Motoren auch mehr Fehlercodes und andere Fehlertexte.
+- **20V Turbos mit ABY, ADU, etc.:**
+bei den "neueren" 20V Turbos können mehr als die 10 Sensoren ausgelesen werden. Dies ist mit dem Tool aktuell nicht möglich. Falls jemand Bock hat, die verwendete Library KLineKWP1281Lib unterstützt das Auslesen sämtlicher Gruppen. Es wäre also theoretisch möglich das Tool zu erweitern. Evtl. gibt es bei den Motoren auch mehr Fehlercodes und andere Fehlertexte.
 
 mit kleinen Änderungen verwendbar:
-- **Audi 100/200 (NF/MC und andere)**
+- **Audi 100/200 (NF/MC und andere):**
 bei den Motoren die nur das Ausblinken unterstützen muss die Hardware etwas geändert werden. Außerdem sind kleine Anpassungen in der Software-Konfiguration notwendig (siehe [Anmerkungen](#-anmerkungen))
 
 ---
