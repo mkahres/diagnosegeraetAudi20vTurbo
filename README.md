@@ -50,7 +50,7 @@ eingeschränkt verwendbar:
 
 mit kleinen Änderungen verwendbar:
 - **Audi 100/200 (NF/MC und andere)**
-- bei den Motoren die nur das Ausblinken unterstützen muss die Hardware etwas genändert werden. Außerdem sind kleine Änderungen in der Software-Konfiguration notwendig (siehe [Anmerkungen](#-anmerkungen))
+- bei den Motoren die nur das Ausblinken unterstützen muss die Hardware etwas geändert werden. Außerdem sind kleine Anpassungen in der Software-Konfiguration notwendig (siehe [Anmerkungen](#-anmerkungen))
 
 ---
 
