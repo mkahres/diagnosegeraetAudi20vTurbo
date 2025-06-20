@@ -125,7 +125,7 @@ Fehlercodes und -texte sind für NF und MC bereits im Code hinterlegt. Man muss 
 
 **Ausblinkfunktion beim 20v Turbo**
 
-Theoretisch ist das Ausblinken für den 20V gar nicht notwendig, da alle Funktionen über K-Line verfügbar sind. Wenn man darauf verzichten will kann man folgende Teile weglassen:
+Die Ausblinkfunktion wird beim 20v Turbo über den L9637D gesteuert. Theoretisch ist das Ausblinken für den 20V gar nicht notwendig, da alle Funktionen über K-Line verfügbar sind. Wenn man darauf verzichten will kann man folgende Teile weglassen:
 - Spannungsmesser
 - von den Diagnoseadapter-Kabeln 2x2 braucht man nur noch einen Satz, da dann der blaue Stecker nicht mehr verwendet wird  
 - LED weglassen oder besser immer auf an setzen. Dazu in diagnoseGeraetAudi200.ino irgendwo in der Funktion setup() diese Zeile hinzufügen: <pre>analogWrite(ledPin, 5);</pre>
