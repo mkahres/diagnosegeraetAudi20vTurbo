@@ -140,7 +140,7 @@ Für Fahrzeuge die nur das Ausblinken unterstützen braucht man anstatt des L963
 
 ## 📦 Inhalte hier auf GitHub
 
-- `diagnoseGeraetAudi200/` → Arduino-Sketch zum Upload auf den Arduino
+- `diagnoseGeraet/` → Arduino-Sketch zum Upload auf den Arduino
 - `diagnoseAuswertung/` → Python-Tool zur Anzeige und Speicherung von Sensorwerten (Live & CSV)
 - `sonstiges/` → Fritzing-Schaltplan und Bilder 
 - `stl/` → Dateien für den 3D-Druck
