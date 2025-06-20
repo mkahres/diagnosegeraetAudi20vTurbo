@@ -142,7 +142,7 @@ Sollte es Probleme bei der K-Line Kommunikation geben kann man in configuration.
 
 **Stromversorgung**
 
-Die Versorgung erfolgt über einen Step-Down-Regler, der auf 7,2 V eingestellt ist. Am VIN-Pin des Arduino übernimmt der interne Spannungsregler die Absenkung auf 5 V. Damit dieser zuverlässig arbeitet, sollten mindestens 7 V anliegen. Während das Original (7–12 V) stabil läuft, lieferte ein Elegoo-Clone bei 9 V Eingang ca. 6 V am 5 V-Pin. Erst mit 7,2 V bekam ich dann sichere 5 V.
+Die Versorgung erfolgt über einen Step-Down-Regler, der auf 7,2 V eingestellt ist. Am VIN-Pin des Arduino übernimmt der interne Spannungsregler die Absenkung auf 5 V. Damit dieser zuverlässig arbeitet, sollten mindestens 7 V anliegen. Während das Original (7–12 V) stabil läuft, lieferte ein Elegoo-Clone bei 9 V Eingang ca. 6 V am 5 V-Pin. Mit 7,2 V bekommt man aber dann sichere 5 V.
 
 **3D Druck** 
 
