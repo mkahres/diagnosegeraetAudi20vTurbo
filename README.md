@@ -1,8 +1,8 @@
 # Audi 20V Turbo Diagnosegerät (Bosch Motronic)
 
-Das ist ein Diagnosegerät zum selber bauen. Es passt ins Handschuhfach, ist benutzerfreundlich und komplett Open Source. Für genauere Analysen gibts noch ein auf die 10 Sensorwerte angepasstes Auswertungstool dazu. Bei Fragen kommentiert am besten unter dem youtube-Video oder legt hier einen Issue an.
+Das ist ein Diagnosegerät zum selber bauen. Es passt ins Handschuhfach, ist benutzerfreundlich und komplett Open Source. Für genauere Analysen gibts noch ein auf die 10 Sensorwerte angepasstes Auswertungstool dazu.
 
-🔽 [aktuelle ZIP-Datei herunterladen](https://github.com/mkahres/audi200diagnosegeraet/archive/refs/heads/main.zip)
+🔽 [aktuelle ZIP-Datei herunterladen (Version 1.0.0)](https://github.com/mkahres/diagnosegeraetAudi20vTurbo/archive/refs/heads/master.zip)
 
 <table>
   <tr>
@@ -15,25 +15,9 @@ Das ist ein Diagnosegerät zum selber bauen. Es passt ins Handschuhfach, ist ben
 
 ## 📲 Bedienung und Infos zum Nachbauen
 
-siehe youtube-Video:
+youtube-Video: https://www.youtube.com/watch?v=6eNAYaNCjRk
 
----
-
-## 🚗 Unterstützte Fahrzeuge
-
-Ich habe es nur an meinem Audi 200 20V getestet, daher keine Garantie! Da sich die Steuergeräte bei diesen Motoren nicht unterscheiden, dürfte es bei folgenden Fahrzeugen problemlos funktionieren:
-- Audi 200 20V (3B)
-- Audi S2 (3B)
-- Audi S4 / S6 C4 (AAN)
-- Audi Urquattro 20V (RR)
-
-eingeschränkt verwendbar:
-- 20V Turbos mit ABY, ADU, etc.
-- Bei den "neueren" 20V Turbos können mehr als die 10 Sensoren ausgelesen werden. Dies ist mit dem Tool aktuell nicht möglich. Falls jemand Bock hat, die verwendete Library KLineKWP1281Lib unterstützt das Auslesen sämtlicher Gruppen. Es wäre also theoretisch möglich das Tool zu erweitern. Evtl. gibt es bei den Motoren auch mehr Fehlercodes und andere Fehlertexte.
-
-mit kleinen Änderungen verwendbar:
-- Audi 100/200 (NF/MC und andere)
-- bei den Motoren die nur das Ausblinken unterstützen muss statt des L9637D ein Relais verwendet werden um die Drahtbrücke zu schließen. Die Verkabelung für den Spannungsmesser um die Blinkcodes zu erkennen muss dann auch geändert werden. Fehlercodes und -texte sind für NF und MC bereits hinterlegt. Der Motorentyp kann konfiguriert werden (siehe [Anmerkungen](#-anmerkungen))
+Bei Fragen kommentiert am besten unter dem Video oder legt hier einen Issue an.
 
 ---
 
@@ -52,15 +36,23 @@ mit kleinen Änderungen verwendbar:
 
 ---
 
-## 📦 Inhalte
+## 🚗 Unterstützte Fahrzeuge
 
-- `diagnoseGeraetAudi200/` → Arduino-Sketch zum Upload auf den Arduino
-- `diagnoseAuswertung/` → Python-Tool zur Anzeige und Speicherung von Sensorwerten (Live & CSV)
-- `sonstiges/` → Fritzing-Schaltplan und Bilder 
-- `stl/` → Dateien für den 3D-Druck
+Ich habe es nur an meinem Audi 200 20V getestet, daher keine Garantie! Da sich die Steuergeräte bei diesen Motoren nicht unterscheiden, dürfte es bei folgenden Fahrzeugen problemlos funktionieren:
+- **Audi 200 20V (3B)**
+- **Audi S2 (3B)**
+- **Audi S4 / S6 C4 (AAN)**
+- **Audi Urquattro 20V (RR)**
+
+eingeschränkt verwendbar:
+- **20V Turbos mit ABY, ADU, etc.:**
+bei den "neueren" 20V Turbos können mehr als die 10 Sensoren ausgelesen werden. Dies ist mit dem Tool aktuell nicht möglich. Falls jemand Bock hat, die verwendete Library KLineKWP1281Lib unterstützt das Auslesen sämtlicher Gruppen. Es wäre also theoretisch möglich das Tool zu erweitern. Evtl. gibt es bei den Motoren auch mehr Fehlercodes und andere Fehlertexte.
+
+mit kleinen Änderungen verwendbar:
+- **Audi 100/200 (NF/MC und andere):**
+bei den Motoren die nur das Ausblinken unterstützen muss die Hardware etwas geändert werden. Außerdem sind kleine Anpassungen in der Software-Konfiguration notwendig (siehe [Anmerkungen](#-anmerkungen))
 
 ---
-
 
 ## ⚡ Schaltplan
 
@@ -72,7 +64,7 @@ mit kleinen Änderungen verwendbar:
 
 **Arduino**
 - aktuelle Arduino IDE installieren: https://www.arduino.cc/en/software/
-- den Sketch in der IDE öffnen (/diagnoseGeraetAudi200/diagnoseGeraetAudi200.ino)
+- den Sketch (/diagnoseGeraet/diagnoseGeraet.ino) in der IDE öffnen
 - folgende Libraries über den Library Manager installieren (https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries/#using-the-library-manager):
    - Adafruit_SH110X
    - U8g2_for_Adafruit_GFX
@@ -121,20 +113,26 @@ Für Fahrzeuge die nur das Ausblinken unterstützen braucht man anstatt des L963
 
 ## 📌 Anmerkungen
 
-**1.** Theoretisch ist das Ausblinken für den 20V gar nicht notwendig, da alle Funktionen über K-Line verfügbar sind. Wenn man darauf verzichten will kann man folgende Teile weglassen:
-- Spannungsmesser
-- von den Diagnoseadapter-Kabeln 2x2 braucht man nur noch einen Satz, da dann der blaue Stecker nicht mehr verwendet wird  
-- LED weglassen oder besser immer auf an setzen. Dazu in diagnoseGeraetAudi200.ino irgendwo in der Funktion setup() diese Zeile hinzufügen: analogWrite(ledPin, 5);
 
-**2.** Die Stromversorgung wird über den Stepdown-Konverter runtergeregelt. Der Arduino hat selber nochmal am VIN-Pin einen Regler. Es sollten mindestens 7V ankommen, damit dieser Regler es dann auf 5V bringen kann. Der originale Arduino kann mit 7-12V gespeist werden. Beim Clone von Elegoo klappt das nicht, wie es bei Clones von anderen Marken aussieht kann ich nicht sagen. Bei Tests habe ich ca. 9V eingespeist und es kamen 6V an. Daher habe ich den Step Down Regler auf 7,2V gesetzt, damit kommen sichere 5V an.  
+**Ausblinken mit Relais für NF, MC etc.** 
 
-**3.** Für Motoren die nur Ausblinken unterstützen kann man in der Datei Constants.h die Einstellungen vornehmen. Der Code berücksichtigt das dann und öffnet und schließt das Relais beim Auslesen. Den Relais-Pin am besten auf 12 lassen. Die Fehlertexte werden für den jeweiligen Motorcode geladen.
+Für Motoren ohne K-Line Schnittstelle die nur Ausblinken unterstützen muss statt des L9637D ein Relais verwendet werden um die Drahtbrücke zu schließen. Die Verkabelung für den Spannungsmesser um die Blinkcodes zu erkennen muss dann auch geändert werden. 
+Fehlercodes und -texte sind für NF und MC bereits im Code hinterlegt. Man muss nur die Konfiguration in der Datei "Constants.h" anpassen:
 
 <pre>const char ENGINE = "3B"; //mögliche Werte: "3B", "MC", "NF"  - für RR, AAN, etc. verwende "3B"
 #define USE_RELAIS false //für MC, NF, etc. auf true setzen
 #define PIN_RELAY 12 //für MC, NF, etc. den Relais PIN setzen</pre>
 
-**4.** Sollte es Probleme bei der K-Line Kommunikation geben kann man in configuration.h das Debugging aktivieren (beide Werte auf "true"). Das sollte man nur zum Testen einschalten, da die Debugging-Ausgaben die Kommunikation mit dem Auswertungstool behindern.
+**Ausblinken beim 20v Turbo**
+
+Die Ausblinkfunktion wird beim 20v Turbo über den L9637D gesteuert. Theoretisch ist das Ausblinken für den 20V gar nicht notwendig, da alle Funktionen über K-Line verfügbar sind. Wenn man darauf verzichten will kann man folgende Teile weglassen:
+- Spannungsmesser
+- von den Diagnoseadapter-Kabeln 2x2 braucht man nur noch einen Satz, da dann der blaue Stecker nicht mehr verwendet wird  
+- LED weglassen oder besser immer auf an setzen. Dazu in diagnoseGeraetAudi200.ino irgendwo in der Funktion setup() diese Zeile hinzufügen: <pre>analogWrite(ledPin, 5);</pre>
+
+**Debugging** 
+
+Sollte es Probleme bei der K-Line Kommunikation geben kann man in configuration.h das Debugging aktivieren (beide Werte auf "true"). Das sollte man nur zum Testen einschalten, da die Debugging-Ausgaben die Kommunikation mit dem Auswertungstool behindern.
 
 <pre>// Enable/disable printing library debug information on the Serial Monitor.
 // You may change the debug level in "KLineKWP1281Lib.h".
@@ -142,7 +140,22 @@ Für Fahrzeuge die nur das Ausblinken unterstützen braucht man anstatt des L963
 // Enable/disable printing bus traffic on the Serial Monitor.
 #define debug_traffic false</pre>
 
-**5.** Den 3D-Druck sollte man am besten mit PETG machen, da es im Hochsommer evtl. doch mal über 60 Grad im Auto werden können und PLA dann schmilzt. 
+**Stromversorgung**
+
+Die Versorgung erfolgt über einen Step-Down-Regler, der auf 7,2 V eingestellt ist. Am VIN-Pin des Arduino übernimmt der interne Spannungsregler die Absenkung auf 5 V. Damit dieser zuverlässig arbeitet, sollten mindestens 7 V anliegen. Während das Original (7–12 V) stabil läuft, lieferte ein Elegoo-Clone bei 9 V Eingang ca. 6 V am 5 V-Pin. Mit 7,2 V bekommt man aber dann sichere 5 V.
+
+**3D Druck** 
+
+Den 3D-Druck sollte man am besten mit PETG machen, da es im Hochsommer evtl. doch mal über 60 Grad im Auto werden können und PLA dann schmilzt. 
+
+---
+
+## 📦 Inhalte hier auf GitHub
+
+- `diagnoseGeraet/` → Arduino-Sketch zum Upload auf den Arduino
+- `diagnoseAuswertung/` → Python-Tool zur Anzeige und Speicherung von Sensorwerten (Live & CSV)
+- `sonstiges/` → Fritzing-Schaltplan und Bilder 
+- `stl/` → Dateien für den 3D-Druck
 
 ---
 
