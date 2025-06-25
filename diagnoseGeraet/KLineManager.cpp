@@ -57,8 +57,8 @@ void KLineManager::getSensorData(Adafruit_SH1106G &display,
   else 
   {
     // Fehlerbehandlung – Buffer mit Nullen füllen
-    displayManager.showError(display, u8g2_for_adafruit_gfx, "Unbekannter Fehler");
-    delay(30000);
+    //displayManager.showError(display, u8g2_for_adafruit_gfx, "Unbekannter Fehler");
+    //delay(30000);
 
     size_t fillCount = min((size_t)10, maxSize);
     for (size_t i = 0; i < fillCount; ++i) 

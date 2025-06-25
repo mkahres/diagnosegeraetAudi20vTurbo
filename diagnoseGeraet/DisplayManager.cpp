@@ -502,7 +502,7 @@ void DisplayManager::showAnalyzeFaultMemory(Adafruit_SH1106G &display, U8G2_FOR_
   display.display();
 }  
 
-const char msgAufPedal[] PROGMEM = "Auf Pedal -> leiser Klick";
+const char msgAufPedal[] PROGMEM = "optional: auf Pedal tippen";
 const char msgAutomat[] PROGMEM = "-> automat. nächstes Ventil";
 const char msgSollte[] PROGMEM = "Sollte hörbares Geräusch";
 const char msgMachen[] PROGMEM = "machen";
