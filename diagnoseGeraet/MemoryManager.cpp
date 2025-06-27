@@ -46,7 +46,7 @@ void MemoryManager::loadData(int addrStart, int numberOfElements, int* buffer, s
     int value;
     EEPROM.get(addr, value);
 
-    if (!filterOutZero || value != 0) {Serial.println("load:");Serial.println(value);
+    if (!filterOutZero || value != 0) {
       buffer[outSize++] = value;
     }
   }
