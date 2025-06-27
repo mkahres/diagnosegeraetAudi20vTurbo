@@ -15,7 +15,7 @@ Das ist ein Diagnosegerät zum selber bauen. Es passt ins Handschuhfach, ist ben
 
 ## 📲 Bedienung und Infos zum Nachbauen
 
-youtube-Video: https://www.youtube.com/watch?v=6eNAYaNCjRk
+youtube-Video: [https://www.youtube.com/watch?v=6eNAYaNCjRk](https://www.youtube.com/watch?v=dj4Saa1aYWg)
 
 Bei Fragen kommentiert am besten unter dem Video oder legt hier einen Issue an.
 
