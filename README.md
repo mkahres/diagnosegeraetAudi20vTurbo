@@ -60,6 +60,12 @@ bei den Motoren die nur das Ausblinken unterstützen muss die Hardware etwas ge�
 
 ---
 
+## 🧱 3D Druck
+
+Den 3D-Druck sollte man am besten mit PETG machen, da es im Hochsommer evtl. doch mal über 60 Grad im Auto werden können und PLA dann schmilzt. Die Dateien liegen unter /stl 
+
+---
+
 ## 🖥️ Setup & Upload
 
 **Arduino**
@@ -143,10 +149,6 @@ Sollte es Probleme bei der K-Line Kommunikation geben kann man in configuration.
 **Stromversorgung**
 
 Die Versorgung erfolgt über einen Step-Down-Regler, der auf 7,2 V eingestellt ist. Am VIN-Pin des Arduino übernimmt der interne Spannungsregler die Absenkung auf 5 V. Damit dieser zuverlässig arbeitet, sollten mindestens 7 V anliegen. Während das Original (7–12 V) stabil läuft, lieferte ein Elegoo-Clone bei 9 V Eingang ca. 6 V am 5 V-Pin. Mit 7,2 V bekommt man aber dann sichere 5 V.
-
-**3D Druck** 
-
-Den 3D-Druck sollte man am besten mit PETG machen, da es im Hochsommer evtl. doch mal über 60 Grad im Auto werden können und PLA dann schmilzt. 
 
 ---
 
