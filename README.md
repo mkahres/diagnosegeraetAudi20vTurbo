@@ -96,7 +96,7 @@ Den 3D-Druck sollte man am besten mit PETG machen, da es im Hochsommer evtl. doc
 - Spannungssensor DC 0~25V
 - LED ⌀ 3mm
 - 2x Push Button 12mm mit Mutter
-- Buzzer
+- passiver Buzzer
 - 2x Widerstand 510 Ω (L9637d Spezifikation - bitte genau daran halten)
 - 4x Widerstand 1K Ω
 - 1x Widerstand 5.6k Ω
