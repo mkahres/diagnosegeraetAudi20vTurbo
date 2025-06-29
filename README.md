@@ -98,7 +98,8 @@ Den 3D-Druck sollte man am besten mit PETG machen, da es im Hochsommer evtl. doc
 - 2x Push Button 12mm mit Mutter
 - passiver Buzzer
 - 2x Widerstand 510 Ω (L9637d Spezifikation - bitte genau daran halten)
-- 4x Widerstand 1K Ω
+- 2x Widerstand 1K Ω
+- 2x Widerstand 10K Ω
 - 1x Widerstand 5.6k Ω
 - 1x Widerstand 220 Ω
 - Diode 1N4148
