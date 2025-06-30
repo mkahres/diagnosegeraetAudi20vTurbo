@@ -38,7 +38,7 @@ Bei Fragen kommentiert am besten unter dem Video oder legt hier einen Issue an.
 
 ## 🚗 Unterstützte Fahrzeuge
 
-Ich habe es nur an meinem Audi 200 20V getestet, daher keine Garantie! Da sich die Steuergeräte bei diesen Motoren nicht unterscheiden, dürfte es bei folgenden Fahrzeugen problemlos funktionieren:
+Ich habe es nur an meinem Audi 200 20V getestet, daher keine Garantie! Da sich die Steuergeräte nach meinem Kenntnisstand in Bezug auf die Auslesefunktionen bei diesen Motoren nicht unterscheiden, dürfte es bei folgenden Fahrzeugen problemlos funktionieren:
 - **Audi 200 20V (3B)**
 - **Audi S2 (3B)**
 - **Audi S4 / S6 C4 (AAN)**
@@ -46,7 +46,7 @@ Ich habe es nur an meinem Audi 200 20V getestet, daher keine Garantie! Da sich d
 
 vermutlich eingeschränkt verwendbar:
 - **20V Turbos mit ABY, ADU, etc.:**
-bei den "neueren" 20V Turbos können mehr als die 10 Sensoren ausgelesen werden. Dies ist mit dem Tool aktuell nicht möglich. Falls jemand Bock hat, die verwendete Library KLineKWP1281Lib unterstützt das Auslesen sämtlicher Gruppen. Es wäre also theoretisch möglich das Tool zu erweitern. Evtl. gibt es bei den Motoren auch mehr Fehlercodes und andere Fehlertexte.
+Hier können wohl mehr als 10 Sensoren ausgelesen werden. Dies ist mit dem Tool aktuell nicht möglich. Falls jemand Bock hat, die verwendete Library KLineKWP1281Lib unterstützt das Auslesen sämtlicher Gruppen. Es wäre also theoretisch möglich das Tool zu erweitern. Evtl. gibt es bei den Motoren auch mehr Fehlercodes und andere Fehlertexte.
 
 mit kleinen Änderungen verwendbar:
 - **Audi 100/200 (NF/MC und andere):**
