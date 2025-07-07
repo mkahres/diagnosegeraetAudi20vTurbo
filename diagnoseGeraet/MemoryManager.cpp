@@ -27,7 +27,7 @@ void MemoryManager::loadSensorData(int* buffer, size_t maxSize, size_t &outSize)
 }
 
 void MemoryManager::saveData(int* list, int sizeOfList, int addrStart, int numberOfElements) {
-  for (int i = 0; i < numberOfElements; i++) {Serial.println("save");
+  for (int i = 0; i < numberOfElements; i++) {
     int addr = addrStart + i * 2;
     int value = (i < sizeOfList) ? list[i] : 0;
 

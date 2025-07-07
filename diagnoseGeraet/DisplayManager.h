@@ -41,6 +41,7 @@ class DisplayManager
     void displayFaultMemoryDetails(Adafruit_SH1106G &display, U8G2_FOR_ADAFRUIT_GFX &u8g2_for_adafruit_gfx, int code, int sizeFaultMemory, int indexFaultMemory, ErrorManager &errorManager);
     void initFaultMemoryDetails();
     void showDeleteFaultMemory(Adafruit_SH1106G &display, U8G2_FOR_ADAFRUIT_GFX &u8g2_for_adafruit_gfx);
+    void showDeleteFaultMemoryQuestion(Adafruit_SH1106G &display, U8G2_FOR_ADAFRUIT_GFX &u8g2_for_adafruit_gfx);
     void showDatentransferBereit(Adafruit_SH1106G &display, U8G2_FOR_ADAFRUIT_GFX &u8g2_for_adafruit_gfx);
     void showDatentransferAktiv(Adafruit_SH1106G &display, U8G2_FOR_ADAFRUIT_GFX &u8g2_for_adafruit_gfx);
     void showDatentransferPausiert(Adafruit_SH1106G &display, U8G2_FOR_ADAFRUIT_GFX &u8g2_for_adafruit_gfx);

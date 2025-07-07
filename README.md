@@ -6,7 +6,7 @@
 
 Das ist ein Diagnosegerät zum selber bauen. Es passt ins Handschuhfach, ist benutzerfreundlich und komplett Open Source. Für genauere Analysen gibts noch ein auf die 10 Sensorwerte angepasstes Auswertungstool dazu.
 
-🔽 [aktuelle ZIP-Datei herunterladen (Version 1.0.1)](https://github.com/mkahres/diagnosegeraetAudi20vTurbo/archive/refs/heads/master.zip)
+🔽 [aktuelle ZIP-Datei herunterladen (Version 1.1.0)](https://github.com/mkahres/diagnosegeraetAudi20vTurbo/archive/refs/heads/master.zip)
 
 <table>
   <tr>
@@ -29,7 +29,7 @@ Bei Fragen kommentiert am besten unter dem Video oder legt hier einen Issue an.
 
 - ✅ **Fehlerspeicher auslesen über K-Line**
 - ✅ **Fehlerspeicher ausblinken**
-- ✅ **Fehlerspeicher löschen**
+- ✅ **Fehlerspeicher löschen über K-Line oder am Ende der Blinkcode-Stellglieddiagnose**
 - ✅ **Stellglieddiagnose über K-Line**
 - ✅ **Stellglieddiagnose mit Blinkcode**
 - ✅ **Sensorwerte live auslesen**

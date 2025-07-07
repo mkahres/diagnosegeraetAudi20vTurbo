@@ -701,6 +701,21 @@ void DisplayManager::showDeleteFaultMemory(Adafruit_SH1106G &display, U8G2_FOR_A
   display.display();
 }
 
+const char msgFehlerspeicherLoeschen[] PROGMEM = "Fehlerspeicher löschen?";
+const char msgJaNein[] PROGMEM = "< Ja           > Nein";
+
+void DisplayManager::showDeleteFaultMemoryQuestion(Adafruit_SH1106G &display, U8G2_FOR_ADAFRUIT_GFX &u8g2_for_adafruit_gfx)
+{  
+  display.clearDisplay();
+  u8g2_for_adafruit_gfx.setFont(u8g2_font_helvR08_tf); 
+  strcpy_P(buffer32, msgFehlerspeicherLoeschen);
+  u8g2_for_adafruit_gfx.drawUTF8(0, 18, buffer32);
+  display.setCursor(0, 55);
+  strcpy_P(buffer32, msgJaNein);
+  display.print(buffer32);
+  display.display();
+}
+
 const char msgDatentransfer[] PROGMEM = "Datentransfer";
 const char msgBereit[] PROGMEM = "- bereit -";
 const char msgAktiv[] PROGMEM = "- aktiv -";

@@ -60,6 +60,7 @@ uint8_t DATA_TO_SERIAL = 28;
 uint8_t SELECT_OPERATION_BLINK = 29;
 uint8_t PREPARE_ACTUATOR_DIAGNOSTICS_KLINE = 30;
 uint8_t EXECUTE_ACTUATOR_DIAGNOSTICS_KLINE = 31;
+uint8_t ANALYZE_ACTUATOR_DELETE_FAULTS = 32;
 uint8_t CRASHY_BIRD = 99;
 
 uint8_t phase = START_SCREEN;
@@ -635,7 +636,7 @@ void loop(void)
         }
         else
         {
-          phase = ANALYZE_ACTUATOR_FINISHED;
+          phase = ANALYZE_ACTUATOR_DELETE_FAULTS;
         }
         if (digitalRead(BUTTON_RIGHT_PIN) == HIGH) 
         { 
@@ -655,11 +656,38 @@ void loop(void)
           buttonRightPressed = false; 
         } 
       }     
+      else if(phase == ANALYZE_ACTUATOR_DELETE_FAULTS)
+      {
+        displayManager.showDeleteFaultMemoryQuestion(display, u8g2_for_adafruit_gfx);
+
+        if (digitalRead(BUTTON_LEFT_PIN) == HIGH) 
+        { 
+          if (!buttonLeftPressed) 
+          { 
+            displayManager.showDeleteFaultMemory(display, u8g2_for_adafruit_gfx);
+            tone(BUZZER, NOTE_D5, 200);
+            buttonLeftPressed = true;
+            setPinState(LOW);  
+            delay(4100);
+            setPinState(HIGH);  
+            phase = ANALYZE_ACTUATOR_FINISHED;
+          }   
+        }
+        else if (digitalRead(BUTTON_RIGHT_PIN) == HIGH) 
+        { 
+          if (!buttonRightPressed) 
+          { 
+            tone(BUZZER, NOTE_E5, 200);
+            buttonRightPressed = true;
+            phase = ANALYZE_ACTUATOR_FINISHED;
+          }   
+        }      
+      }   
       else if(phase == ANALYZE_ACTUATOR_FINISHED)
       {
         displayManager.showActuatorFinished(display, u8g2_for_adafruit_gfx);
-        manageLeftButtonForMenu(false);       
-      }   
+        manageLeftButtonForMenu(false);     
+      }       
       else if(phase == ANALYZE_ACTUATOR_NOT_POSSIBLE)
       {
         displayManager.showActuatorsNotPossible(display, u8g2_for_adafruit_gfx);
@@ -870,7 +898,7 @@ void analyzeBlinkCodes(long now)
     if(duration >= 2480 && duration <= 2520)
     {
       counter2500ms++;
-      if(counter2500ms > 4)
+      if(counter2500ms > 6)
       {
         faultMemoryBlinkFinished = true;
         counter2500ms  = 0;
@@ -962,7 +990,7 @@ void analyzeActuators(long now)
     if(duration >= 2480 && duration <= 2520)
     {
       counter2500ms++;
-      if(counter2500ms > 4)
+      if(counter2500ms > 6)
       {
         actuatorBlinkFinished = true;
         counter2500ms  = 0;
