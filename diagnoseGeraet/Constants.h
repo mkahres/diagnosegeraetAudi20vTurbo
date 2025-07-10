@@ -7,7 +7,7 @@
 #include <Adafruit_SH110X.h>
 #include <U8g2_for_Adafruit_GFX.h>
 
-const char ENGINE = "3B"; //mögliche Werte: "3B", "MC", "NF"  - für RR, AAN, etc. verwende "3B"
+const char ENGINE[] = "3B"; //mögliche Werte: "3B", "MC", "NF"  - für RR, AAN, etc. verwende "3B"
 #define USE_RELAIS false //für MC, NF, etc. auf true setzen
 #define PIN_RELAY 12 //für MC, NF, etc. den Relais PIN setzen
 
