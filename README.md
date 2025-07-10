@@ -23,6 +23,11 @@ youtube-Video: [https://www.youtube.com/watch?v=6eNAYaNCjRk](https://www.youtube
 
 Bei Fragen kommentiert am besten unter dem Video oder legt hier einen Issue an.
 
+- Gerät startet sobald es am Diagnosestecker am Auto eingesteckt wird (auch ohne Zündung).
+- Um die Sensoren über die Auswertungsprogramm im Detail zu sehen wird zusätzlich der Laptop per USB an das Diagnosetool angeschlossen.
+- Das Diagnosetool kann auch allein über USB betrieben werden um sich die gespeicherten Werte anzugucken. Das Easteregg funktioniert auch über USB.
+- Auf keinen Fall das Tool an den Diagnosestecker und zusätzlich am Zigarettenanzünder per USB anschließen!
+
 ---
 
 ## 🔧 Funktionen
