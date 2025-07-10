@@ -397,8 +397,6 @@ void loop(void)
       //Anzeigen
       else if(phase == SHOW_SENSOR_DATA_FINAL)
       {
-        manageLeftButtonForMenu(false);
-
         if (digitalRead(BUTTON_RIGHT_PIN) == HIGH) 
         { 
           if (!buttonRightPressed) 
@@ -424,7 +422,8 @@ void loop(void)
         else
         {
           displayManager.displaySensorDetails(display, u8g2_for_adafruit_gfx, indexSensorData, sensorData[indexSensorData-1]);
-        }
+        }        
+        manageLeftButtonForMenu(false);
       }   
       else if(phase == SHOW_FAULT_MEMORY)
       {
