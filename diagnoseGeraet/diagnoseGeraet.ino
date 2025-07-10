@@ -428,8 +428,6 @@ void loop(void)
       }   
       else if(phase == SHOW_FAULT_MEMORY)
       {
-        manageLeftButtonForMenu(false);
-
         if (digitalRead(BUTTON_RIGHT_PIN) == HIGH) 
         { 
           if (!buttonRightPressed) 
@@ -457,6 +455,8 @@ void loop(void)
         {       
           displayManager.displayFaultMemoryDetails(display, u8g2_for_adafruit_gfx, faultMemory[indexFaultMemory-1], faultCount, indexFaultMemory, errorManager);
         }
+        
+        manageLeftButtonForMenu(false);
       }   
      
       //Ausführen
