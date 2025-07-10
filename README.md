@@ -25,7 +25,7 @@ Bei Fragen kommentiert am besten unter dem Video oder legt hier einen Issue an.
 
 - Gerät startet sobald es am Diagnosestecker am Auto eingesteckt wird (auch ohne Zündung).
 - Um die Sensorwerte über das Auswertungsprogramm zu analysieren wird zusätzlich der Laptop per USB an das Diagnosegerät angeschlossen.
-- Das Diagnosegerät kann auch über USB am Laptop betrieben werden um sich die gespeicherten Fehler/Sensorwerte anzugucken. Das Easteregg funktioniert auch über USB.
+- Das Diagnosegerät kann auch allein über USB am Laptop betrieben werden um sich die gespeicherten Fehler/Sensorwerte anzugucken. Das Easteregg funktioniert auch über USB.
 - Auf keinen Fall das Gerät an den Diagnosestecker und zusätzlich am Zigarettenanzünder per USB anschließen, evtl. gibt es dann ein Masse-Problem.
 
 ---
