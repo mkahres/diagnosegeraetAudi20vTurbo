@@ -62,6 +62,8 @@ bei den Motoren die nur das Ausblinken unterstützen muss die Hardware etwas ge�
 
 ![Schaltplan Vorschau](./sonstiges/diagnosegeraetKLinePlan_Steckplatine.png)
 
+Unter /sonstiges findet man ein paar Bilder vom Zusammenbau.
+
 ---
 
 ## 🧱 3D Druck
