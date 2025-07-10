@@ -1049,6 +1049,7 @@ void getCurrentCodeString(char* buffer, const int* digits, int digitCount) {
 
 void resetBlinkVariables(boolean resetHard)
 {
+  noBlinkingFor12Seconds = false;
   ignoreFirstLongBreak = true;
   digitIndex = 0;
   blinkCount = 0;
