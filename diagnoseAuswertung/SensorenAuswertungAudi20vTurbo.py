@@ -688,16 +688,21 @@ port_control_frame.pack(fill=X, pady=5)
 
 port_list = lade_com_ports()
 anzeige_geraet_liste = [(format_entry(dev, desc), dev) for dev, desc in port_list]
+optionen = [anzeige for anzeige, _ in anzeige_geraet_liste]
 
-arduino_index = next((i for i, (anzeige, dev) in enumerate(anzeige_geraet_liste) if "Arduino" in anzeige), None)
-if arduino_index is not None:
-    com_port_var.set(anzeige_geraet_liste[arduino_index][0])
-elif anzeige_geraet_liste:
-    com_port_var.set(anzeige_geraet_liste[0][0])
+if optionen:
+    # Versuche Arduino zu finden
+    arduino_index = next((i for i, (anzeige, dev) in enumerate(anzeige_geraet_liste) if "Arduino" in anzeige), None)
+    if arduino_index is not None:
+        default_option = anzeige_geraet_liste[arduino_index][0]
+    else:
+        default_option = optionen[0]
 else:
-    com_port_var.set("Kein Port gefunden")
+    default_option = "Kein Port gefunden"
+    optionen = [default_option]  # Damit OptionMenu nicht leer ist
 
-com_port_optionmenu = OptionMenu(port_control_frame, com_port_var, *(anzeige for anzeige, _ in anzeige_geraet_liste))
+com_port_var.set(default_option)
+com_port_optionmenu = OptionMenu(port_control_frame, com_port_var, *optionen)
 com_port_optionmenu.pack(side=LEFT, expand=True, fill=X)
 button_refresh = Button(port_control_frame, text="🔄 Refresh", command=refresh_com_ports)
 button_refresh.pack(side=LEFT, padx=5)
