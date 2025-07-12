@@ -26,7 +26,8 @@ Bei Fragen kommentiert am besten unter dem Video oder legt hier einen Issue an.
 - Gerät startet sobald es am Diagnosestecker am Auto eingesteckt wird (auch ohne Zündung).
 - Um die Sensorwerte über das Auswertungsprogramm zu analysieren wird zusätzlich der Laptop per USB an das Diagnosegerät angeschlossen.
 - Das Diagnosegerät kann auch allein über USB am Laptop betrieben werden um sich die gespeicherten Fehler/Sensorwerte anzugucken. Das Easteregg funktioniert auch über USB.
-- Auf keinen Fall das Gerät an den Diagnosestecker und zusätzlich am Zigarettenanzünder per USB anschließen, evtl. gibt es dann ein Masse-Problem.
+- ⚠️ Auf keinen Fall das Gerät an den Diagnosestecker und zusätzlich am Zigarettenanzünder per USB-Adapter anschließen, evtl. gibt es dann ein Masse-Problem!?
+- ⚠️ Das Auswertungstool wurde nur an einem Windows Laptop getestet. Um es auf Mac/Linux zum Laufen zu bringen sollte man sich schon etwas mit Python auskennen!
 
 ---
 
@@ -79,6 +80,8 @@ Den 3D-Druck sollte man am besten mit PETG machen, da es im Hochsommer evtl. doc
 
 ## 🖥️ Setup & Upload
 
+Alles nur auf Windows getestet. Gerade das Python Tool könnte auf Mac und Linux Probleme machen!
+
 **Arduino**
 - aktuelle Arduino IDE installieren: https://www.arduino.cc/en/software/
 - den Sketch (/diagnoseGeraet/diagnoseGeraet.ino) in der IDE öffnen
@@ -90,7 +93,8 @@ Den 3D-Druck sollte man am besten mit PETG machen, da es im Hochsommer evtl. doc
 
 **Python**  
 - aktuelles Python Release installieren für das Auswertungs-Tool: https://www.python.org/downloads/
-- Doppelklick auf /diagnoseAuswertung/startTool.bat zum Starten des Tools
+- Während der Installation wird gefragt ob man Python zum PATH hinzufügen will, das sollte man tun.
+- Doppelklick auf /diagnoseAuswertung/startTool_Windows.bat zum Starten des Tools
 
 ---
 
