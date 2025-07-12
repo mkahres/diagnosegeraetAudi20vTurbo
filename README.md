@@ -27,7 +27,7 @@ Bei Fragen kommentiert am besten unter dem Video oder legt hier einen Issue an.
 - Um die Sensorwerte über das Auswertungsprogramm zu analysieren wird zusätzlich der Laptop per USB an das Diagnosegerät angeschlossen.
 - Das Diagnosegerät kann auch allein über USB am Laptop betrieben werden um sich die gespeicherten Fehler/Sensorwerte anzugucken. Das Easteregg funktioniert auch über USB.
 - ⚠️ Auf keinen Fall das Gerät an den Diagnosestecker und zusätzlich am Zigarettenanzünder per USB-Adapter anschließen, evtl. gibt es dann ein Masse-Problem!?
-- ⚠️ Das Auswertungstool wurde nur an Laptops mit Windows 10 und 11 getestet. Um es auf Mac/Linux zum Laufen zu bringen sollte man sich schon etwas mit Python auskennen!
+- ⚠️ Das Auswertungstool wurde nur auf Laptops mit Windows 10 und 11 getestet. Um es auf Mac/Linux zum Laufen zu bringen sollte man sich schon etwas mit Python auskennen!
 
 ---
 
