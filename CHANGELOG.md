@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.2] – 2025-07-12
+- Auswertungstool nun auch mit Windows 11 kompatibel
+  
 ## [1.1.1] – 2025-07-10
 - STL für alternativen Deckel (20v Turbo) hinzugefügt
 - bessere Bilder vom Inneren des Geräts
