@@ -94,6 +94,9 @@ Alles nur auf Windows getestet. Gerade das Python Tool könnte auf Mac und Linux
 **Python**  
 - aktuelles Python Release installieren für das Auswertungs-Tool: https://www.python.org/downloads/
 - Während der Installation wird gefragt ob man Python zum PATH hinzufügen will, das sollte man tun.
+- Falls Microsoft Visual C++ Redistributable noch nicht installiert ist, bitte ebenfalls installieren:
+  - https://aka.ms/vs/17/release/vc_redist.x64.exe
+  - https://aka.ms/vs/17/release/vc_redist.x86.exe
 - Doppelklick auf /diagnoseAuswertung/startTool_Windows.bat zum Starten des Tools
 
 ---
