@@ -1,9 +1,5 @@
 # Audi 20V Turbo Diagnosegerät (Bosch Motronic)
 
-> ⚠️ **Wichtiger Hinweis (4. Juli 2025):**  
-> In der vorherigen Version des Schaltplans war der 1k Widerstand zum zweiten Transistor falsch verdrahtet. Das ist jetzt korrigiert.
-
-
 Das ist ein Diagnosegerät zum selber bauen. Es passt ins Handschuhfach, ist benutzerfreundlich und komplett Open Source. Für genauere Analysen gibts noch ein auf die 10 Sensorwerte angepasstes Auswertungstool dazu.
 
 🔽 [aktuelle ZIP-Datei herunterladen (Version 1.1.2)](https://github.com/mkahres/diagnosegeraetAudi20vTurbo/archive/refs/heads/master.zip)
